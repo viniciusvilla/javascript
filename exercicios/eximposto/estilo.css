@@ -10,15 +10,13 @@ body{
 
 main{
     margin: auto;
-    border-style: groove;
+    border-style: double;
+    
     border: 1px 1px 1px black;
     min-width: 320px;
     max-width: 695px;
     height: 600px;
-    background-image: url('imagens/bostil2.png');
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: 200px;
+    
 }
 
 header{
@@ -28,6 +26,7 @@ header{
     text-shadow: 1px 1px 1px black;
     height: 150px;
     padding-top: 50px;
+    padding-bottom: 30px;
     background-image: url('imagens/hb2.png');
     background-position: center;
     
@@ -47,6 +46,15 @@ article>div{
     
     
     
+}
+
+picture>img{
+    position: sticky;
+    left: 2000px;
+    top: 2000px;
+    
+    
+   
 }
 
 
