@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 18pt arial
+        }
+
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+            margin-top: 20px;
+            
+        }
+
+        div{
+            margin-top: 40px;
+            border: solid 1px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Média de Notas</h1>
+    
+    Nota 1: <input type="number" name="" id="n1">
+    Nota 2: <input type="number" name="" id="n2">
+    <div id="res">Média</div>
+    <input type="button" value="calcular" onclick="calcular()">
+
+    <script>
+        
+        function calcular(){
+            var n1 = window.document.getElementById('n1')
+            var n2 = window.document.getElementById('n2')
+            var res = window.document.getElementById('res')
+
+            var nota1 = Number(n1.value)
+            var nota2 = Number(n2.value)
+
+            var m = (nota1+nota2)/2
+
+            res.innerHTML = (`Sua média é ${m}`)
+
+            if (m>=7.0 && m<=10.0){
+                res.innerHTML += (`<p>Sua nota é A</p>`)
+            } else if (m>=4.5 && m<=6.9 ) {
+                res.innerHTML += (`<p>Sua nota é B</p>`)
+            }else if (m>=0 && m<=4.4){
+                res.innerHTML += (`<p>Sua nota é F</p>`)
+            }
+        }
+        
+        
+
+        
+        
+       
+
+
+
+    </script>
+</body>
+</html>

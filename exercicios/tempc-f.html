@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conersor de Celsius para Fahreint</h1>
+    <label for="temp">Diga a temperatura em Fahreint</label><input type="number" name="" id="temp">
+    <input type="button" value="calcular" onclick="calc()">
+
+    <div id="r">A temperatura em Celsius é ###</div>
+
+    <script>
+        function calc(){
+            var temp = window.document.querySelector('input#temp')
+            var r = window.document.querySelector('div#r')
+
+            var f = Number.parseFloat(temp.value)
+
+            var c = (f - 32)/1.8
+
+            r.innerHTML = (`A temperatura é de ${c} graus Celsius`)
+
+        }
+    </script>
+
+</body>
+</html>

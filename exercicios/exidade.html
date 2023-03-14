@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            
+        }
+
+        label{
+            padding-right: 10px;
+        }
+
+        div{
+            padding-top: 20px;
+        }
+
+        
+       
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quantos anos eu tenho??</h1>
+
+    <label for="nasc">Ano de Nascimento:</label> <input type="number" name="" id="nasc"> <br> <br>
+
+    <label for="ano.a">Ano atual:</label> <input type="number" name="" id="ano_a"> <br> <br>
+
+    <input type="button" value="calcular" onclick="calc()"> 
+
+    <div id="res">Você tem ### anos</div>
+
+    <script>
+        function calc(){
+            var nasc = window.document.querySelector('input#nasc')
+            var ano_a = window.document.querySelector('input#ano_a')
+
+            var res = window.document.querySelector('div#res')
+
+            var nasc1 = Number(nasc.value)
+            var ano_a1 = Number(ano_a.value)
+
+            var r = ano_a1 - nasc1
+
+            res.innerHTML = `Você tem ${r} anos`
+        }
+    </script>
+</body>
+</html>

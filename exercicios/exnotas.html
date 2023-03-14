@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando Notas</h1>
+
+  N1  <input type="number" name="" id="n1"> +
+  N2  <input type="number" name="" id="n2">
+  <input type="button" value="calc" onclick="calc()">
+
+  <div id="resm">Resultado</div>
+  <div id="resn">Nota</div>
+
+  <script>
+    function calc(){
+        var n1 = window.document.querySelector('input#n1')
+        var n2 = window.document.querySelector('input#n2')
+        var res = window.document.querySelector('div#res')
+
+        var fn1 = Number(n1.value)
+        var fn2 = Number(n2.value)
+
+        var media = (fn1+fn2)/2
+
+        resm.innerHTML = `Sua média foi ${media}`
+
+        if(media>=8 && media<=10){
+            resn.innerHTML = `Sua nota é A`
+        } else if(media>=5 && media<=7.9){
+            resn.innerHTML = `Sua nota é B`
+        } else if (media>=0 && media<=4.9){
+            resn.innerHTML = `Sua nota é F`
+        }
+
+        
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas OTK</title>
+    <style>
+        body{
+            font: 16pt Arial;
+        }
+
+        div{
+           margin-top: 5px;
+           margin-bottom: 5px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multa</h1>
+        Velocidade do veiculo <input type="number" name="" id="v1">
+
+        <input type="button" value="verificar" onclick="clicar()">
+
+        <div id="dv">Sua velocidade foi de Km/h</div>
+
+        <div id="ds">Situação: ###</div>
+
+        <div>Dirija sempre com cuidado.</div>
+
+        
+
+       <script>
+             function clicar(){
+                var v1 = window.document.querySelector('input#v1')
+                var dv = window.document.querySelector('div#dv')
+                var ds = window.document.querySelector('div#ds')
+                var vf = Number(v1.value)
+
+                dv.innerHTML = (`Sua velocidade foi de <strong>100 Km/h</strong>`)
+
+                if(vf>80){
+                    ds.innerHTML = ('<strong>VOCÊ FOI MULTADO</strong>')
+                } else{
+                    ds.innerHTML = ('Normal')
+                }   
+
+             }
+
+       </script>
+
+       
+</body>
+</html>
